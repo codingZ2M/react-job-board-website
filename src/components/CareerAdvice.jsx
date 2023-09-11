@@ -25,7 +25,7 @@ const CareerAdvice = ({ articles }) => {
                      <p>{article.date}</p>
               </div>
               <div className="text-lg mb-2">{article.summary}</div>
-              <Link to='/'  target="_self" className="text-blue-500 hover:text-blue-700">
+              <Link to='/'  className="text-blue-500 hover:text-blue-700">
                   Read More
               </Link>
               </div>

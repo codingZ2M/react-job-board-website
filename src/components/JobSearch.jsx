@@ -18,14 +18,12 @@ const JobSearch = () => {
     // Filter the search results based on the search parameters
     const filteredJobs = jobs.filter((job) => {
       const { title, company, location, salary } = job;
-      return (
-        title.toLowerCase().includes(jobTitle.toLowerCase()) &&
-        company.toLowerCase().includes(company.toLowerCase()) &&
-        location.toLowerCase().includes(location.toLowerCase()) &&
+        title.toLowerCase().includes(jobTitle.toLowerCase()) 
+        company.toLowerCase().includes(company.toLowerCase()) 
+        location.toLowerCase().includes(location.toLowerCase())
         salary.toLowerCase().includes(salaryRange.toLowerCase())
-      );
+        return title && location && salary && company;
     });
-
     // Set the search results in state
     setSearchResults(filteredJobs);
   };
